@@ -1,0 +1,43 @@
+
+  
+  const research5 = {
+    researchName: "Innovations in 3D Printing Technology",
+    researchDetails: "This research explores the latest advancements in 3D printing and its applications in various industries.",
+    date: "2023-07-30",
+    image: "image5.jpg"
+  };
+  
+  const research6 = {
+    researchName: "The Impact of Climate Change on Marine Ecosystems",
+    researchDetails: "This research investigates the effects of climate change on marine life and ecosystems in different regions.",
+    date: "2023-08-20",
+    image: "image6.jpg"
+  };
+  
+  const research7 = {
+    researchName: "Analyzing Cybersecurity Threats in the Digital Age",
+    researchDetails: "This research examines the emerging cybersecurity threats and strategies to safeguard digital systems.",
+    date: "2023-09-12",
+    image: "image7.jpg"
+  };
+  
+  const research8 = {
+    researchName: "Psychological Effects of Social Media Usage",
+    researchDetails: "This research delves into the psychological impacts of excessive social media use on individuals' well-being.",
+    date: "2023-06-28",
+    image: "image8.jpg"
+  };
+  
+  const research9 = {
+    researchName: "Advances in Quantum Computing",
+    researchDetails: "This research explores the cutting-edge developments in quantum computing and its potential applications.",
+    date: "2023-07-10",
+    image: "image9.jpg"
+  };
+  
+  const research10 = {
+    researchName: "Addressing Food Insecurity in Developing Nations",
+    researchDetails: "This research focuses on strategies to tackle food insecurity and improve access to nutrition in developing countries.",
+    date: "2023-08-05",
+    image: "image10.jpg"
+  };
