@@ -29,10 +29,17 @@ async function run() {
     await client.connect();
 
     const College = client.db("College")
+    const admissionCollection = client.db("College").collection("addmission")
+    const reviewCollection = client.db("College").collection("review")
 
     app.get("/Colleges", async (req, res) => {
       const cursor = College.collection("allcolleges").find();
       const result = await cursor.limit(3).toArray();
+      res.send(result);
+    });
+    app.get("/AllColleges", async (req, res) => {
+      const cursor = College.collection("allcolleges").find();
+      const result = await cursor.toArray();
       res.send(result);
     });
 
@@ -42,6 +49,32 @@ async function run() {
       const result = await College.collection("allcolleges").findOne(query);
       res.send(result);
     });
+
+    app.get("/myCollege", async (req, res) => {
+      query = { name : req.query.name };
+      const result = await admissionCollection.find(query).toArray();
+      res.send(result);
+    });
+
+
+    app.post("/addmission", async (req, res) => {
+      const students = req.body;
+      const result = await admissionCollection.insertOne(students);
+      res.send(result);
+    });
+
+    app.post("/review", async (req, res) => {
+      const review = req.body;
+      const result = await reviewCollection.insertOne(review);
+      res.send(result);
+    });
+
+    app.get("/review", async (req, res) => {
+      const cursor = reviewCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
+    });
+
 
 
     // Send a ping to confirm a successful connection
